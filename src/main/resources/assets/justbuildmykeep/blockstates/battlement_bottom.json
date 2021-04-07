@@ -1,0 +1,8 @@
+{
+  "variants": {
+      "facing=north": { "model": "justbuildmykeep:block/battlement_bottom_n" },
+      "facing=south": { "model": "justbuildmykeep:block/battlement_bottom_s" },
+      "facing=west": { "model": "justbuildmykeep:block/battlement_bottom_w" },
+      "facing=east": { "model": "justbuildmykeep:block/battlement_bottom_e" }
+  }
+}

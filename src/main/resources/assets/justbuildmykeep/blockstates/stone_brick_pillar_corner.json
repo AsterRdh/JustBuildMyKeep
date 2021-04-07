@@ -1,0 +1,9 @@
+
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/stone_brick_pillar_corner_e" },
+    "facing=south": { "model": "justbuildmykeep:block/stone_brick_pillar_corner_w" },
+    "facing=west": { "model": "justbuildmykeep:block/stone_brick_pillar_corner_n" },
+    "facing=east": { "model": "justbuildmykeep:block/stone_brick_pillar_corner_s" }
+  }
+}

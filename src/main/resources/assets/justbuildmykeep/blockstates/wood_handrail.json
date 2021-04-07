@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=east,is_corner=false": { "model": "justbuildmykeep:block/wood_handrail_i2" },
+    "facing=south,is_corner=false": { "model": "justbuildmykeep:block/wood_handrail_i3" },
+    "facing=west,is_corner=false": { "model": "justbuildmykeep:block/wood_handrail_i4" },
+    "facing=north,is_corner=false": { "model": "justbuildmykeep:block/wood_handrail_i1" },
+    "facing=east,is_corner=true": { "model": "justbuildmykeep:block/wood_handrail_l2" },
+    "facing=south,is_corner=true": { "model": "justbuildmykeep:block/wood_handrail_l3" },
+    "facing=west,is_corner=true": { "model": "justbuildmykeep:block/wood_handrail_l4" },
+    "facing=north,is_corner=true": { "model": "justbuildmykeep:block/wood_handrail_l1" }
+  }
+}

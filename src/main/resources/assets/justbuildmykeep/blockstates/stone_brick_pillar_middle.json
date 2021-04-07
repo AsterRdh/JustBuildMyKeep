@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "vertical=0,facing=north": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_n_t" },
+    "vertical=0,facing=south": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_s_t" },
+    "vertical=0,facing=west": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_w_t" },
+    "vertical=0,facing=east": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_e_t" },
+    "vertical=1,facing=north": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_n_b" },
+    "vertical=1,facing=south": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_s_b" },
+    "vertical=1,facing=west": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_w_b" },
+    "vertical=1,facing=east": { "model": "justbuildmykeep:block/stone_brick_pillar_middle_e_b" }
+  }
+}

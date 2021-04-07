@@ -1,0 +1,9 @@
+
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/concrete12_w_c3" },
+    "facing=south": { "model": "justbuildmykeep:block/concrete12_w_c1" },
+    "facing=west": { "model": "justbuildmykeep:block/concrete12_w_c2" },
+    "facing=east": { "model": "justbuildmykeep:block/concrete12_w_c4" }
+  }
+}

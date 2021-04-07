@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,hinge=right": { "model": "justbuildmykeep:block/girder_ns_r" },
+    "facing=south,hinge=right": { "model": "justbuildmykeep:block/girder_ns_l" },
+    "facing=west,hinge=right": { "model": "justbuildmykeep:block/girder_ew_l" },
+    "facing=east,hinge=right": { "model": "justbuildmykeep:block/girder_ew_r" },
+    "facing=north,hinge=left": { "model": "justbuildmykeep:block/girder_ns_l" },
+    "facing=south,hinge=left": { "model": "justbuildmykeep:block/girder_ns_r" },
+    "facing=west,hinge=left": { "model": "justbuildmykeep:block/girder_ew_r" },
+    "facing=east,hinge=left": { "model": "justbuildmykeep:block/girder_ew_l" }
+  }
+}

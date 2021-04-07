@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/cross_small_gold_ns" },
+    "facing=south": { "model": "justbuildmykeep:block/cross_small_gold_ns" },
+    "facing=west": { "model": "justbuildmykeep:block/cross_small_gold_we" },
+    "facing=east": { "model": "justbuildmykeep:block/cross_small_gold_we" }
+  }
+}

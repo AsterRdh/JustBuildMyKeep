@@ -1,0 +1,8 @@
+{
+  "block.justbuildmykeep.testblock":"测试物品1",
+  "block.justbuildmykeep.battlement_bottom": "城垛底部",
+  "block.justbuildmykeep.battlement_top_flat": "城垛顶部(平)",
+  "block.justbuildmykeep.loophole_big": "射箭口(大)",
+  "_comment": "Creative_Tabs",
+  "itemGroup.justbuildmykeep": "Just Build My Keep"
+}

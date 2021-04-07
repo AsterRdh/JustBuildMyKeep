@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "justbuildmykeep:block/flame_basket_noarrows" },
+    "lit=true": { "model": "justbuildmykeep:block/flame_basket_noarrows_fire" }
+  }
+}

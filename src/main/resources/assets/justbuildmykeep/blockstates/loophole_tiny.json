@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "pos=0,facing=north": { "model": "justbuildmykeep:block/loophole_tiny_only_ns" },
+    "pos=0,facing=south": { "model": "justbuildmykeep:block/loophole_tiny_only_ns" },
+    "pos=1,facing=north": { "model": "justbuildmykeep:block/loophole_tiny_button_ns" },
+    "pos=1,facing=south": { "model": "justbuildmykeep:block/loophole_tiny_button_ns" },
+    "pos=2,facing=north": { "model": "justbuildmykeep:block/loophole_tiny_middle_ns" },
+    "pos=2,facing=south": { "model": "justbuildmykeep:block/loophole_tiny_middle_ns" },
+    "pos=3,facing=north": { "model": "justbuildmykeep:block/loophole_tiny_top_ns" },
+    "pos=3,facing=south": { "model": "justbuildmykeep:block/loophole_tiny_top_ns" },
+
+    "pos=0,facing=west": { "model": "justbuildmykeep:block/loophole_tiny_only_we" },
+    "pos=0,facing=east": { "model": "justbuildmykeep:block/loophole_tiny_only_we" },
+    "pos=1,facing=west": { "model": "justbuildmykeep:block/loophole_tiny_button_we" },
+    "pos=1,facing=east": { "model": "justbuildmykeep:block/loophole_tiny_button_we" },
+    "pos=2,facing=west": { "model": "justbuildmykeep:block/loophole_tiny_middle_we" },
+    "pos=2,facing=east": { "model": "justbuildmykeep:block/loophole_tiny_middle_we" },
+    "pos=3,facing=west": { "model": "justbuildmykeep:block/loophole_tiny_top_we" },
+    "pos=3,facing=east": { "model": "justbuildmykeep:block/loophole_tiny_top_we" }
+  }
+}

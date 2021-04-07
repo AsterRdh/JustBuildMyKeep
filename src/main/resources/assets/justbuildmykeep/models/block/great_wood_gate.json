@@ -1,0 +1,5 @@
+{
+  "loader": "forge:obj",
+  "model": "justbuildmykeep:models/block/great_wood_gate.obj",
+  "flip-v": true
+}

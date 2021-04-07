@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/loophole_big_s" },
+    "facing=south": { "model": "justbuildmykeep:block/loophole_big_n" },
+    "facing=west": { "model": "justbuildmykeep:block/loophole_big_e" },
+    "facing=east": { "model": "justbuildmykeep:block/loophole_big_w" }
+  }
+}

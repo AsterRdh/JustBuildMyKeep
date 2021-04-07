@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,hinge=right": { "model": "justbuildmykeep:block/stone_door_frame_big_top_left_s" },
+    "facing=south,hinge=right": { "model": "justbuildmykeep:block/stone_door_frame_big_top_left_n" },
+    "facing=west,hinge=right": { "model": "justbuildmykeep:block/stone_door_frame_big_top_left_e" },
+    "facing=east,hinge=right": { "model": "justbuildmykeep:block/stone_door_frame_big_top_left_w" },
+    "facing=north,hinge=left": { "model": "justbuildmykeep:block/stone_door_frame_big_top_right_s" },
+    "facing=south,hinge=left": { "model": "justbuildmykeep:block/stone_door_frame_big_top_right_n" },
+    "facing=west,hinge=left": { "model": "justbuildmykeep:block/stone_door_frame_big_top_right_e" },
+    "facing=east,hinge=left": { "model": "justbuildmykeep:block/stone_door_frame_big_top_right_w" }
+  }
+}

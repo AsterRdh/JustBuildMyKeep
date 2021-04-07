@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/stone_door_frame_left_s" },
+    "facing=south": { "model": "justbuildmykeep:block/stone_door_frame_left_n" },
+    "facing=west": { "model": "justbuildmykeep:block/stone_door_frame_left_e" },
+    "facing=east": { "model": "justbuildmykeep:block/stone_door_frame_left_w" }
+  }
+}

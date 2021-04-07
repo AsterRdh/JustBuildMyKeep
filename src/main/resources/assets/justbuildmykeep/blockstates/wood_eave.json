@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=north,type=top": { "model": "justbuildmykeep:block/eave_t3" },
+    "facing=south,type=top": { "model": "justbuildmykeep:block/eave_t1" },
+    "facing=west,type=top": { "model": "justbuildmykeep:block/eave_t4" },
+    "facing=east,type=top": { "model": "justbuildmykeep:block/eave_t2" },
+    "facing=north,type=bottom": { "model": "justbuildmykeep:block/eave_b3" },
+    "facing=south,type=bottom": { "model": "justbuildmykeep:block/eave_b1" },
+    "facing=west,type=bottom": { "model": "justbuildmykeep:block/eave_b2" },
+    "facing=east,type=bottom": { "model": "justbuildmykeep:block/eave_b4" },
+    "facing=north,type=double": { "model": "justbuildmykeep:block/eave_d3" },
+    "facing=south,type=double": { "model": "justbuildmykeep:block/eave_d4" },
+    "facing=west,type=double": { "model": "justbuildmykeep:block/eave_d1" },
+    "facing=east,type=double": { "model": "justbuildmykeep:block/eave_d2" }
+  }
+}

@@ -1,0 +1,10 @@
+
+
+{
+  "variants": {
+    "facing=north": { "model": "justbuildmykeep:block/wood_barrel_a" },
+    "facing=south": { "model": "justbuildmykeep:block/wood_barrel_a" },
+    "facing=west": { "model": "justbuildmykeep:block/wood_barrel_b" },
+    "facing=east": { "model": "justbuildmykeep:block/wood_barrel_b" }
+  }
+}

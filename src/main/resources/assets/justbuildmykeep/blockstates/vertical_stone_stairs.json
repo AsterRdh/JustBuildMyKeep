@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north,hinge=right,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_s1" },
+    "facing=south,hinge=right,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_n1" },
+    "facing=west,hinge=right,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_e1" },
+    "facing=east,hinge=right,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_w1" },
+
+    "facing=north,hinge=left,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_e1" },
+    "facing=south,hinge=left,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_w1" },
+    "facing=west,hinge=left,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_n1" },
+    "facing=east,hinge=left,wood=true": { "model": "justbuildmykeep:block/vertical_stone_stairs_s1" },
+
+    "facing=north,hinge=right,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_s" },
+    "facing=south,hinge=right,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_n" },
+    "facing=west,hinge=right,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_e" },
+    "facing=east,hinge=right,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_w" },
+
+    "facing=north,hinge=left,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_e" },
+    "facing=south,hinge=left,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_w" },
+    "facing=west,hinge=left,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_n" },
+    "facing=east,hinge=left,wood=false": { "model": "justbuildmykeep:block/vertical_stone_stairs_s" }
+  }
+}
