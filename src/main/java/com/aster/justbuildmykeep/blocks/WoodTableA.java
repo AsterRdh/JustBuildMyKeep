@@ -1,6 +1,6 @@
 package com.aster.justbuildmykeep.blocks;
 
-import com.aster.justbuildmykeep.container.ObsidianFirstContainerTileEntity;
+import com.aster.justbuildmykeep.entity.ObsidianFirstContainerTileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;

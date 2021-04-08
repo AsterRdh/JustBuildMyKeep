@@ -1,13 +1,12 @@
 package com.aster.justbuildmykeep.container;
 
+import com.aster.justbuildmykeep.entity.ObsidianFirstContainerTileEntity;
 import com.aster.justbuildmykeep.events.ContainerTypeRegistry;
-import net.minecraft.client.gui.screen.inventory.ChestScreen;
-import net.minecraft.client.gui.screen.inventory.CraftingScreen;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.container.ClickType;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.CraftingResultSlot;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIntArray;
@@ -22,9 +21,26 @@ public class ObsidianFirstContainer extends Container {
         this.intArray = intArray;
         trackIntArray(this.intArray);
         ObsidianFirstContainerTileEntity obsidianFirstContainerTileEntity = (ObsidianFirstContainerTileEntity) world.getTileEntity(pos);
-        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 0, 0, 0));
-        layoutPlayerInventorySlots(playerInventory, -16, 65);
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 0, 51, 17));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 1, 69, 17));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 2, 87, 17));
+
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 3, 51, 35));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 4, 69, 35));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 5, 87, 35));
+
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 6, 51, 53));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 7, 69, 53));
+        this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 8, 87, 53));
+
+        layoutPlayerInventorySlots(playerInventory, 8, 84);
         //CraftingResultSlot
+    }
+
+    @Override
+    public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, PlayerEntity player) {
+        System.out.println("slotClick");
+        return super.slotClick(slotId, dragType, clickTypeIn, player);
     }
 
     @Override

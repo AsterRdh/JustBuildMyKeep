@@ -2,7 +2,6 @@ package com.aster.justbuildmykeep.entity;
 
 import com.aster.justbuildmykeep.Blocks;
 import com.aster.justbuildmykeep.Utils;
-import com.aster.justbuildmykeep.container.ObsidianFirstContainerTileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;

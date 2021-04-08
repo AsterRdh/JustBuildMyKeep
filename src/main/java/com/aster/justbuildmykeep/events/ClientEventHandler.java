@@ -27,6 +27,9 @@ public class ClientEventHandler {
         ClientRegistry.bindTileEntityRenderer(TileEntityTypeRegistry.ARROW_BARREL_ENTITIES.get(), (tileEntityRendererDispatcher -> {
             return new ArrowBarrelTER(tileEntityRendererDispatcher);
         }));
+        ClientRegistry.bindTileEntityRenderer(TileEntityTypeRegistry.OBSIDIAN_FIRST_CONTAINER_ENTITY.get(), (tileEntityRendererDispatcher -> {
+            return new TableTER(tileEntityRendererDispatcher);
+        }));
 //        RenderingRegistry.registerEntityRenderingHandler(JustBuildMyKeep.SIT_ENTITY_TYPE,
 //                (EntityRendererManager manager) -> { return new EmptyRenderer(manager);
 //        });

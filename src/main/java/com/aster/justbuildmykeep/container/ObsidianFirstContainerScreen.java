@@ -8,9 +8,9 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class ObsidianFirstContainerScreen extends ContainerScreen<ObsidianFirstContainer> {
-    private final ResourceLocation OBSIDIAN_CONTAINER_RESOURCE = new ResourceLocation("minecraft", "textures/gui/container/dispenser.png");
-    private final int textureWidth = 256;
-    private final int textureHeight = 256;
+    private final ResourceLocation OBSIDIAN_CONTAINER_RESOURCE = new ResourceLocation(Utils.MOD_ID, "textures/gui/container/table_dispenser.png");
+    private final int textureWidth = 176;
+    private final int textureHeight = 166;
 
     @Override
     public void render(MatrixStack matrixStack, int mouseX, int mouseY, float partialTicks) {
@@ -27,13 +27,13 @@ public class ObsidianFirstContainerScreen extends ContainerScreen<ObsidianFirstC
 //        this.inventoryRows = container.getNumRows();
 //        this.ySize = 114 + this.inventoryRows * 18;
 //        this.playerInventoryTitleY = this.ySize - 94;
-        this.xSize = textureWidth/2;
-        this.ySize = textureHeight/2;
+        this.xSize = textureWidth;
+        this.ySize = textureHeight;
     }
 
     @Override
     protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
-        drawCenteredString(matrixStack, this.font, Integer.toString(this.getContainer().getIntArray().get(0)), 82, 20, 0xeb0505);
+        //drawCenteredString(matrixStack, this.font, Integer.toString(this.getContainer().getIntArray().get(0)), 82, 20, 0xeb0505);
     }
 
     @Override
@@ -43,11 +43,7 @@ public class ObsidianFirstContainerScreen extends ContainerScreen<ObsidianFirstC
         int i = (this.width - this.xSize)/2;
         int j = (this.height - this.ySize)/2;
         //Screen
-        //blit(matrixStack, i, j, 0, 0, xSize, ySize, this.textureWidth, textureHeight);
-        blit(matrixStack,i-24,j-19,0,0,256,256);
-//        public void blit(MatrixStack matrixStack, int x, int y, int uOffset, int vOffset, int uWidth, int vHeight) {
-//            blit(matrixStack, x, y, this.blitOffset, (float)uOffset, (float)vOffset, uWidth, vHeight, 256, 256);
-//        }
+        blit(matrixStack, i, j, 0, 0, xSize, ySize, this.textureWidth, textureHeight);
     }
 }
 
