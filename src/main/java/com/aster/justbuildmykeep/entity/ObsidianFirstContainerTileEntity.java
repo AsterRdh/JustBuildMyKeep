@@ -1,6 +1,7 @@
 package com.aster.justbuildmykeep.entity;
 
 import com.aster.justbuildmykeep.Utils;
+import com.aster.justbuildmykeep.blocks.Basetable;
 import com.aster.justbuildmykeep.container.ObsidianFirstContainer;
 import com.aster.justbuildmykeep.container.ObsidianFirstContainerItemNumber;
 import com.aster.justbuildmykeep.entity.TileEntityTypeRegistry;
@@ -15,22 +16,54 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.INBT;
+import net.minecraft.nbt.IntNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.Direction;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.vector.Quaternion;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 
 import javax.annotation.Nullable;
+import java.util.Arrays;
 
 public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity implements ITickableTileEntity, INamedContainerProvider {
     private NonNullList<ItemStack> chestContents = NonNullList.withSize(12, ItemStack.EMPTY);
     private Inventory inventory = new Inventory(12);
     private ObsidianFirstContainerItemNumber itemNumber = new ObsidianFirstContainerItemNumber();
+    private int[] chestContentsDirection = new int[12];
+
+    public void setChestContentsDirection(int index,Direction d){
+        System.out.println(chestContentsDirection.length);
+        if(index<this.chestContentsDirection.length)
+        switch (d){
+            case EAST: this.chestContentsDirection[index]= 0 ;break;
+            case SOUTH:this.chestContentsDirection[index]= 1 ;break;
+            case WEST:this.chestContentsDirection[index]= 2 ;break;
+            case NORTH:this.chestContentsDirection[index]= 3 ;break;
+            default: break;
+        }
+    }
+
+    public Quaternion getLookingDirection(int index) {
+        switch (index){
+            case 0:
+                return new Quaternion(0f,90,0f,true);
+            case 1:
+                return new Quaternion(0,0,0,true);
+            case 2:
+                return new Quaternion(0,180,0,true);
+            case 3:
+            default:
+                return new Quaternion(0,-90,0,true);
+        }
+    }
 
     public ObsidianFirstContainerTileEntity() {
         super(TileEntityTypeRegistry.OBSIDIAN_FIRST_CONTAINER_ENTITY.get());
@@ -61,7 +94,9 @@ public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity imp
         super.read(state, nbt);
         this.chestContents = NonNullList.withSize(12, ItemStack.EMPTY);
         if (!this.checkLootAndRead(nbt)) {
-            ItemStackHelper.loadAllItems(nbt, this.chestContents);
+            CompoundNBT contents = nbt.getCompound("contents");
+            ItemStackHelper.loadAllItems(contents, this.chestContents);
+            this.chestContentsDirection= nbt.getIntArray("directions");
             for(int i=0;i<12;i++){
                 inventory.setInventorySlotContents(i,chestContents.get(i));
             }
@@ -71,9 +106,12 @@ public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity imp
     @Override
     public CompoundNBT write(CompoundNBT compound) {
         super.write(compound);
+        CompoundNBT contents=new CompoundNBT();
+        compound.put("contents",contents);
+        compound.putIntArray("directions",chestContentsDirection);
         if (!this.checkLootAndRead(compound)) {
             this.setList();
-            ItemStackHelper.saveAllItems(compound, this.chestContents);
+            ItemStackHelper.saveAllItems(contents, this.chestContents);
         }
         return compound;
     }
@@ -96,18 +134,8 @@ public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity imp
         }
     }
 
-    public void setChestContents(ItemStack itemStack,int index){
-        if(itemStack!=null){
-            chestContents.set(index,itemStack);
-        }
-        inventory.setInventorySlotContents(index,itemStack);
-    }
-
     @Override
     public void tick() {
-        if (world.isRemote) {
-            setList();
-        }
     }
 
     @Override

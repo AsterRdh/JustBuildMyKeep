@@ -43,7 +43,8 @@ public class TableTER extends TileEntityRenderer<ObsidianFirstContainerTileEntit
             ItemStack item = tileEntityIn.getItemList().get(i);
             //Vector3d pos = new Vector3d(0.5,1,0.833333);
             Vector3d pos = posList.get(i);
-            Quaternion roa = new Quaternion(0,0,0,1);
+
+            Quaternion roa =tileEntityIn.getLookingDirection(i);
             matrixStackIn.translate(pos.getX(),pos.getY(),pos.getZ());
             matrixStackIn.rotate(roa);
             matrixStackIn.scale(1.2f,1.2f,1.2f);

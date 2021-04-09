@@ -15,12 +15,14 @@ import net.minecraft.world.World;
 
 public class ObsidianFirstContainer extends Container {
     private ObsidianFirstContainerItemNumber intArray;
+    private ObsidianFirstContainerTileEntity tileEntity;
 
     public ObsidianFirstContainer(int id, PlayerInventory playerInventory, BlockPos pos, World world, ObsidianFirstContainerItemNumber intArray) {
         super(ContainerTypeRegistry.obsidianFirstContainer.get(), id);
         this.intArray = intArray;
         trackIntArray(this.intArray);
         ObsidianFirstContainerTileEntity obsidianFirstContainerTileEntity = (ObsidianFirstContainerTileEntity) world.getTileEntity(pos);
+        tileEntity=obsidianFirstContainerTileEntity;
         this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 0, 51, 17));
         this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 1, 69, 17));
         this.addSlot(new Slot(obsidianFirstContainerTileEntity.getInventory(), 2, 87, 17));
@@ -37,9 +39,14 @@ public class ObsidianFirstContainer extends Container {
         //CraftingResultSlot
     }
 
+
+
     @Override
     public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, PlayerEntity player) {
-        System.out.println("slotClick");
+        if (clickTypeIn==ClickType.PICKUP && slotId>=0 && slotId<9 ){
+            System.out.println(slotId);
+            tileEntity.setChestContentsDirection(slotId,player.getHorizontalFacing());
+        }
         return super.slotClick(slotId, dragType, clickTypeIn, player);
     }
 
