@@ -52,11 +52,12 @@ public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity imp
     }
 
     public Quaternion getLookingDirection(int index) {
-        switch (index){
+
+        switch (chestContentsDirection[index]){
             case 0:
-                return new Quaternion(0f,90,0f,true);
+                return new Quaternion(0f,0,0f,true);
             case 1:
-                return new Quaternion(0,0,0,true);
+                return new Quaternion(0,904,0,true);
             case 2:
                 return new Quaternion(0,180,0,true);
             case 3:
@@ -142,20 +143,12 @@ public class ObsidianFirstContainerTileEntity extends LockableLootTileEntity imp
     public int getSizeInventory() {
         return 12;
     }
-
-    /**
-     * Retrieves packet to send to the client whenever this Tile Entity is resynced via World.notifyBlockUpdate. For
-     * modded TE's, this packet comes back to you clientside in {@link #onDataPacket}
-     */
+    
     @Nullable
     public SUpdateTileEntityPacket getUpdatePacket() {
         return new SUpdateTileEntityPacket(this.pos, 1, this.getUpdateTag());
     }
 
-    /**
-     * Get an NBT compound to sync to the client with SPacketChunkData, used for initial loading of the chunk or when
-     * many blocks change at once. This compound comes back to you clientside in {@link handleUpdateTag}
-     */
     public CompoundNBT getUpdateTag() {
         return this.write(new CompoundNBT());
     }

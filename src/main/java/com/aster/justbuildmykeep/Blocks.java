@@ -124,4 +124,28 @@ public class Blocks {
     @ObjectHolder("justbuildmykeep:wood_eave")
     public static WoodEave WOOD_EAVE;
 
+    @ObjectHolder("justbuildmykeep:portcullis_block")
+    public static PortcullisBlock PORTCULLIS_BLOCK;
+
+    @ObjectHolder("justbuildmykeep:stained_glass_a")
+    public static StainedGlassA STAINED_GLASS_A;
+    @ObjectHolder("justbuildmykeep:stained_glass_b")
+    public static StainedGlassB STAINED_GLASS_B;
+    @ObjectHolder("justbuildmykeep:stained_glass_c")
+    public static StainedGlassC STAINED_GLASS_C;
+    @ObjectHolder("justbuildmykeep:stained_glass_d")
+    public static StainedGlassD STAINED_GLASS_D;
+    @ObjectHolder("justbuildmykeep:stained_glass_e")
+    public static StainedGlassE STAINED_GLASS_E;
+    @ObjectHolder("justbuildmykeep:stained_glass_f")
+    public static StainedGlassF STAINED_GLASS_F;
+    @ObjectHolder("justbuildmykeep:stained_glass_g")
+    public static StainedGlassG STAINED_GLASS_G;
+    @ObjectHolder("justbuildmykeep:stained_glass_h")
+    public static StainedGlassH STAINED_GLASS_H;
+    @ObjectHolder("justbuildmykeep:stained_glass_i")
+    public static StainedGlassI STAINED_GLASS_I;
+    @ObjectHolder("justbuildmykeep:stained_glass_j")
+    public static StainedGlassJ STAINED_GLASS_J;
+
 }

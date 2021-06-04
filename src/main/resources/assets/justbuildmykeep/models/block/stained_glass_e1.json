@@ -1,0 +1,8 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "justbuildmykeep:block/stained_glass_base_a",
+	"textures": {
+		"0": "justbuildmykeep:block/glass_1x5_a5",
+		"particle": "justbuildmykeep:block/glass_1x5_a5"
+	}
+}

@@ -1,0 +1,118 @@
+{
+  "variants": {
+    "facing=north,is_horizontal=false,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 180
+    },
+    "facing=south,is_horizontal=false,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 0
+    },
+    "facing=west,is_horizontal=false,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 90
+    },
+    "facing=east,is_horizontal=false,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 270
+    },
+
+    "facing=north,is_horizontal=false,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 180
+    },
+    "facing=south,is_horizontal=false,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 0
+    },
+    "facing=west,is_horizontal=false,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 90
+    },
+    "facing=east,is_horizontal=false,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 270
+    },
+
+    "facing=north,is_horizontal=false,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 180
+    },
+    "facing=south,is_horizontal=false,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 0
+    },
+    "facing=west,is_horizontal=false,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 90
+    },
+    "facing=east,is_horizontal=false,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 270
+    },
+
+    "facing=north,is_horizontal=true,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 180,
+      "x": 90
+    },
+    "facing=south,is_horizontal=true,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 0,
+      "x": 90
+    },
+    "facing=west,is_horizontal=true,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 90,
+      "x": 90
+    },
+    "facing=east,is_horizontal=true,pos=0": {
+      "model": "justbuildmykeep:block/stained_glass_j1",
+      "y": 270,
+      "x": 90
+    },
+    "facing=north,is_horizontal=true,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 180,
+      "x": 90
+    },
+    "facing=south,is_horizontal=true,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 0,
+      "x": 90
+    },
+    "facing=west,is_horizontal=true,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 90,
+      "x": 90
+    },
+    "facing=east,is_horizontal=true,pos=1": {
+      "model": "justbuildmykeep:block/stained_glass_j2",
+      "y": 270,
+      "x": 90
+    },
+
+    "facing=north,is_horizontal=true,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 180,
+      "x": 90
+    },
+    "facing=south,is_horizontal=true,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 0,
+      "x": 90
+    },
+    "facing=west,is_horizontal=true,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 90,
+      "x": 90
+    },
+    "facing=east,is_horizontal=true,pos=2": {
+      "model": "justbuildmykeep:block/stained_glass_j3",
+      "y": 270,
+      "x": 90
+    }
+
+
+  }
+}

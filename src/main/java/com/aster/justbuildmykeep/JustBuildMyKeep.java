@@ -1,10 +1,13 @@
 package com.aster.justbuildmykeep;
 
 import com.aster.justbuildmykeep.blocks.*;
+import com.aster.justbuildmykeep.creature.villages.PointOfInterestTypes;
+import com.aster.justbuildmykeep.creature.villages.VillagerUtil;
 import com.aster.justbuildmykeep.entity.SitEntity;
 import com.aster.justbuildmykeep.entity.TileEntityTypeRegistry;
 
 import com.aster.justbuildmykeep.events.ContainerTypeRegistry;
+import com.aster.justbuildmykeep.items.PlateWood;
 import com.aster.justbuildmykeep.items.TestItem;
 import com.aster.justbuildmykeep.setup.ModSetup;
 import net.minecraft.block.Block;
@@ -40,6 +43,8 @@ public class JustBuildMyKeep {
 
     private void setup(final FMLCommonSetupEvent event) {
         setup.init();
+        VillagerUtil.fixPOITypeBlockStates(PointOfInterestTypes.BANKER);
+        VillagerUtil.fixPOITypeBlockStates(PointOfInterestTypes.GUARD);
     }
 
 
@@ -102,12 +107,27 @@ public class JustBuildMyKeep {
             blockRegistryEvent.getRegistry().register(new ConcreteWall19());
             blockRegistryEvent.getRegistry().register(new ConcreteWall20());
             blockRegistryEvent.getRegistry().register(new WoodEave());
+            blockRegistryEvent.getRegistry().register(new PortcullisBlock());
+            blockRegistryEvent.getRegistry().register(new StainedGlassA());
+            blockRegistryEvent.getRegistry().register(new StainedGlassB());
+            blockRegistryEvent.getRegistry().register(new StainedGlassC());
+            blockRegistryEvent.getRegistry().register(new StainedGlassD());
+            blockRegistryEvent.getRegistry().register(new StainedGlassE());
+            blockRegistryEvent.getRegistry().register(new StainedGlassF());
+            blockRegistryEvent.getRegistry().register(new StainedGlassG());
+            blockRegistryEvent.getRegistry().register(new StainedGlassH());
+            blockRegistryEvent.getRegistry().register(new StainedGlassI());
+            blockRegistryEvent.getRegistry().register(new StainedGlassJ());
         }
-
 
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> itemRegistryEvent) {
             Item.Properties properties=new Item.Properties().group(setup.getItemGroup());
+            Item.Properties properties2=new Item.Properties().group(setup.TABLE_WARE);
+            Item.Properties properties3=new Item.Properties().group(setup.GLASS_GROUP);
+
+            itemRegistryEvent.getRegistry().register(new PlateWood());
+
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.TESTBLOCK, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","testblock"));
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.TESTARROWBLOCK, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","test_arrow_block"));
 
@@ -167,12 +187,24 @@ public class JustBuildMyKeep {
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.CONCRETE_WALL19, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","concrete_wall19"));
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.CONCRETE_WALL20, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","concrete_wall20"));
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.WOOD_EAVE, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","wood_eave"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.PORTCULLIS_BLOCK, new Item.Properties().group(setup.getItemGroup())).setRegistryName("justbuildmykeep","portcullis_block"));
+
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_A, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_a"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_B, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_b"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_C, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_c"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_D, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_d"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_E, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_e"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_F, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_f"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_G, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_g"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_H, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_h"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_I, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_i"));
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_J, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_j"));
+
             itemRegistryEvent.getRegistry().register(new TestItem(setup));
         }
 
         @SubscribeEvent
-        public static void registerEntity(RegistryEvent.Register<EntityType<?>> event)
-        {
+        public static void registerEntity(RegistryEvent.Register<EntityType<?>> event) {
             event.getRegistry().register(EntityType.Builder.<SitEntity>create(SitEntity::new, EntityClassification.MISC)
                     .setCustomClientFactory((spawnEntity, world) -> SIT_ENTITY_TYPE.create(world))
                     .setTrackingRange(256)
