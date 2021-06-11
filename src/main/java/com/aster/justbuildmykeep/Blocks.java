@@ -147,5 +147,9 @@ public class Blocks {
     public static StainedGlassI STAINED_GLASS_I;
     @ObjectHolder("justbuildmykeep:stained_glass_j")
     public static StainedGlassJ STAINED_GLASS_J;
+    @ObjectHolder("justbuildmykeep:goods_box_f1")
+    public static GoodsBox GOODS_BOX1;
+
+
 
 }

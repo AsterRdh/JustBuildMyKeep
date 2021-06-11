@@ -17,6 +17,8 @@ public class TileEntityTypeRegistry {
             () -> TileEntityType.Builder.create(ArrowBarrelEntity::new, Blocks.ARROW_BARREL).build(null));
     public static final RegistryObject<TileEntityType<ObsidianFirstContainerTileEntity>> OBSIDIAN_FIRST_CONTAINER_ENTITY = TILE_ENTITIES.register("wood_table_a",
             () -> TileEntityType.Builder.create(ObsidianFirstContainerTileEntity::new, Blocks.WOOD_TABLE1).build(null));
+    public static final RegistryObject<TileEntityType<BoxContainerTileEntity>> BOX_CONTAINER_TILEENTITY = TILE_ENTITIES.register("goods_box_f1",
+            () -> TileEntityType.Builder.create(BoxContainerTileEntity::new, Blocks.GOODS_BOX1).build(null));
 
     public static RegistryObject<TileEntityType<EmblemShieldEntity>> emblemShieldEntity = TILE_ENTITIES.register("obsidian_ter_tileentity", () -> {
         return TileEntityType.Builder.create(() -> {

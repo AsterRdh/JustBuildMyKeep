@@ -118,6 +118,7 @@ public class JustBuildMyKeep {
             blockRegistryEvent.getRegistry().register(new StainedGlassH());
             blockRegistryEvent.getRegistry().register(new StainedGlassI());
             blockRegistryEvent.getRegistry().register(new StainedGlassJ());
+            blockRegistryEvent.getRegistry().register(new GoodsBox());
         }
 
         @SubscribeEvent
@@ -199,6 +200,9 @@ public class JustBuildMyKeep {
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_H, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_h"));
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_I, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_i"));
             itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.STAINED_GLASS_J, new Item.Properties().group(setup.GLASS_GROUP)).setRegistryName("justbuildmykeep","stained_glass_j"));
+
+
+            itemRegistryEvent.getRegistry().register(new BlockItem(Blocks.GOODS_BOX1, new Item.Properties().group(setup.TABLE_WARE)).setRegistryName("justbuildmykeep","goods_box_f1"));
 
             itemRegistryEvent.getRegistry().register(new TestItem(setup));
         }
