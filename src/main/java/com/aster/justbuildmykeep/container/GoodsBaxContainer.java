@@ -2,17 +2,25 @@ package com.aster.justbuildmykeep.container;
 
 import com.aster.justbuildmykeep.entity.BoxContainerTileEntity;
 import com.aster.justbuildmykeep.events.ContainerTypeRegistry;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.container.ClickType;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.Slot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIntArray;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class GoodsBaxContainer  extends Container {
     private ObsidianFirstContainerItemNumber intArray;
     private BoxContainerTileEntity tileEntity;
+
+    public BlockState getBlockState() {
+        return tileEntity.getBlockState();
+    }
 
     public GoodsBaxContainer(int id, PlayerInventory playerInventory, BlockPos pos, World world, ObsidianFirstContainerItemNumber intArray) {
         super(ContainerTypeRegistry.goodsBoxContainer.get(), id);
@@ -55,7 +63,25 @@ public class GoodsBaxContainer  extends Container {
         return index;
     }
     @Override
-    public boolean canInteractWith(PlayerEntity playerIn) {
-        return false;
+    public ItemStack slotClick(int slotId, int dragType, ClickType clickTypeIn, PlayerEntity player) {
+        if (clickTypeIn==ClickType.PICKUP && slotId>=0 && slotId<9 ){
+            System.out.println(slotId);
+            tileEntity.setChestContentsDirection(slotId,player.getHorizontalFacing());
+        }
+        return super.slotClick(slotId, dragType, clickTypeIn, player);
     }
+    @Override
+    public boolean canInteractWith(PlayerEntity playerIn) {
+        return true;
+    }
+    @Override
+    public ItemStack transferStackInSlot(PlayerEntity playerIn, int index) {
+        return ItemStack.EMPTY;
+    }
+
+
+    public IIntArray getIntArray() {
+        return intArray;
+    }
+
 }

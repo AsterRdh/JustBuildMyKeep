@@ -21,15 +21,16 @@ public class TableTER extends TileEntityRenderer<ObsidianFirstContainerTileEntit
 
     public TableTER(TileEntityRendererDispatcher rendererDispatcherIn) {
         super(rendererDispatcherIn);
-        posList.add( new Vector3d(0.166667,1,0.166667));
-        posList.add( new Vector3d(0.166667,1,0.5));
         posList.add( new Vector3d(0.166667,1,0.833333));
-        posList.add( new Vector3d(0.5,1,0.166667));
-        posList.add( new Vector3d(0.5,1,0.5));
+        posList.add( new Vector3d(0.166667,1,0.5));
+        posList.add( new Vector3d(0.166667,1,0.166667));
         posList.add( new Vector3d(0.5,1,0.833333));
-        posList.add( new Vector3d(0.833333,1,0.166667));
-        posList.add( new Vector3d(0.833333,1,0.5));
+        posList.add( new Vector3d(0.5,1,0.5));
+        posList.add( new Vector3d(0.5,1,0.166667));
         posList.add( new Vector3d(0.833333,1,0.833333));
+        posList.add( new Vector3d(0.833333,1,0.5));
+        posList.add( new Vector3d(0.833333,1,0.166667));
+
         posList.add( new Vector3d(0.166667,1,0.5));
         posList.add( new Vector3d(0.5,1,0.5));
         posList.add( new Vector3d(0.833333,1,0.5));
