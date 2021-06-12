@@ -1,6 +1,7 @@
 package com.aster.justbuildmykeep.events;
 
 import com.aster.justbuildmykeep.Utils;
+import com.aster.justbuildmykeep.container.GoodsBaxContainer;
 import com.aster.justbuildmykeep.container.ObsidianFirstContainer;
 import com.aster.justbuildmykeep.container.ObsidianFirstContainerItemNumber;
 import net.minecraft.client.Minecraft;
@@ -18,4 +19,8 @@ public class ContainerTypeRegistry {
             "wood_table_a",
             () -> IForgeContainerType
                     .create((int windowId, PlayerInventory inv, PacketBuffer data) -> new ObsidianFirstContainer(windowId, inv, data.readBlockPos(), Minecraft.getInstance().world, new ObsidianFirstContainerItemNumber())));
+    public static final RegistryObject<ContainerType<GoodsBaxContainer>> goodsBoxContainer = CONTAINERS.register(
+            "goods_box",
+            () -> IForgeContainerType
+                    .create((int windowId, PlayerInventory inv, PacketBuffer data) -> new GoodsBaxContainer(windowId, inv, data.readBlockPos(), Minecraft.getInstance().world, new ObsidianFirstContainerItemNumber())));
 }
